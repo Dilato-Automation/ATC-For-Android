@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.dilatoit.eagletest.atchelper.MainActivity">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/text_wifi"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="网络状态:"
+                    android:layout_marginLeft="20dip"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/display_wifi"
+                    android:layout_weight="8"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/text_current_state"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="20dip"
+                    android:layout_height="wrap_content"
+                    android:text="连接状态:"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/display_current_state"
+                    android:layout_weight="8"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/text_current_type"
+                    android:layout_weight="2"
+                    android:layout_marginLeft="20dip"
+                    android:layout_height="wrap_content"
+                    android:text="网络类型:"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/display_current_type"
+                    android:layout_weight="8"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp" />
+            </TableRow>
+
+
+            <Spinner
+                android:id="@+id/select_setting"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:text="Select Setting"
+                android:spinnerMode="dialog" />
+
+            <LinearLayout
+                android:weightSum="4" >
+                <Button
+                    android:id="@+id/change_wifi"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="设置" />
+                <Button
+                    android:id="@+id/connect_atc"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="连接" />
+                <Button
+                    android:id="@+id/startatc"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="启动" />
+                <Button
+                    android:id="@+id/stopatc"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="停止" />
+            </LinearLayout>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/manual_start"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="手动配置" />
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>
